@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo con degradado azul y morado */
+body {
+    background: linear-gradient(135deg, #00b7ff, #0008f9); /* Fondo degradado */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Estilo del contenedor */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco más opaco */
+    padding: 70px; /* Padding */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.752); /* Resplandor estático */
+    max-width: 350px; /* Ancho más pequeño */
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo de encabezado */
+h2 {
+    color: #ffffff; /* Color blanco */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 28px; /* Aumentar tamaño de fuente */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+}
+
+/* Estilo de los inputs */
+input[type="text"],
+input[type="password"],
+select {
+    border: 2px solid #40dfff; /* Borde azul vibrante */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.044); /* Fondo semi-transparente */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px;
+    outline: none;
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: border-color 0.3s ease-in-out; /* Transición suave para el borde */
+    margin-top: 10px; /* Espacio entre inputs y select */
+    width: calc(100% - 20px); /* Ajustar el ancho */
+}
+
+/* Cambios en el borde al escribir */
+input:focus,
+select:focus {
+    border-color: #f2f2f2; /* Color de borde más claro al enfocar */
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255); /* Color del placeholder */
+}
+
+/* Botón con efecto de rebote */
+button {
+    background: linear-gradient(135deg, #1500ff, #00dcf9); /* Fondo degradado */
+    border: none;
+    padding: 15px;
+    color: #ffffff; /* Color de texto blanco */
+    font-weight: bold;
+    width: 100%;
+    border-radius: 50px; /* Botón redondeado */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px; /* Espacio adicional entre botones */
+}
+
+button:hover {
+    background: blueviolet; /* Cambio de color más dinámico al pasar el mouse */
+    cursor: pointer;
+    transform: translateY(-5px); /* Rebote hacia arriba */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 0; /* Efecto "brinco" */
+}
+
+/* Link de registro */
+a {
+    color: #94dfff; /* Color azul suave para el enlace */
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    color: #ff0800; /* Color rojo para el mensaje de error */
+    margin-top: 10px; /* Espacio superior para el mensaje de error */
+    font-size: 14px; /* Ajustar tamaño de fuente */
+    text-align: center; /* Centrar texto */
+}
+
+.success-message {
+    color: #00ff08; /* Verde para éxito */
+    margin-top: 10px; /* Espacio superior para el mensaje */
+    font-size: 14px; /* Ajustar tamaño de fuente */
+    text-align: center; /* Centrar texto */
+}
+
+/* Texto adicional */
+p {
+    color: #fff; /* Color blanco */
+}

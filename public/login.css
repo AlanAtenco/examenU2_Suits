@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo con degradado azul y morado */
+body {
+    background: linear-gradient(135deg, #ea00ff, #005eff); /* Fondo degradado */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Estilo del contenedor */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco más opaco */
+    padding: 80px; /* Padding */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.752); /* Resplandor estático */
+    max-width: 350px; /* Ancho más pequeño */
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo de encabezado */
+h2 {
+    color: #ffffff; /* Color blanco */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 28px; /* Aumentar tamaño de fuente */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+}
+
+/* Grupo de entrada */
+.input-group {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+/* Estilo del texto del grupo de entrada */
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Color blanco */
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* Estilo de los inputs */
+input[type="text"],
+input[type="password"] {
+    border: 2px solid #ff4081; /* Borde rosa vibrante */
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #ffffff; /* Color blanco */
+    flex: 1; /* Permitir que el input ocupe el espacio restante */
+    transition: border-color 0.3s ease-in-out; /* Transición suave para el borde */
+}
+
+/* Cambios en el borde al escribir */
+input:focus {
+    border-color: #ff66b2; /* Color de borde más claro al enfocar */
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Color del placeholder */
+}
+
+/* Botón con efecto de rebote */
+button {
+    background: linear-gradient(135deg, #ff4081, #ff66b2); /* Fondo degradado rosa */
+    border: none;
+    padding: 15px;
+    color: #ffffff; /* Color de texto blanco */
+    font-weight: bold;
+    width: 100%;
+    border-radius: 50px; /* Botón redondeado */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px; /* Espacio adicional entre botones */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff66b2, #ff4081); /* Cambio de color más dinámico al pasar el mouse */
+    cursor: pointer;
+    transform: translateY(-5px); /* Rebote hacia arriba */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 0; /* Efecto "brinco" */
+}
+
